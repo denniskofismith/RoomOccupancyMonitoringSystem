@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Occupancy Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/bootstrap.min.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Current Occupancy Status</h1>
+        <div class="alert alert-info mt-3">
+            <p><strong>Event:</strong> {{ latest_event['event'] }}</p>
+            <p><strong>Timestamp:</strong> {{ latest_event['timestamp'] }}</p>
+        </div>
+        <a class="btn btn-primary mt-3" href="{{ url_for('history') }}">View History</a>
+    </div>
+</body>
+</html>
